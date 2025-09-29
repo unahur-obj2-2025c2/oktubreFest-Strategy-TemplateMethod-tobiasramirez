@@ -56,7 +56,7 @@ public class Carpa {
     }
 
     public void servirJarraDeCerveza(Persona persona, Double capacidad){
-        if !(personas.contains(persona)){
+        if (! (personas.contains(persona))){
             throw new RuntimeException("no se encuentra en la carpa");
 
         }
@@ -68,7 +68,7 @@ public class Carpa {
         return personas.stream().filter(p->p.esEbrioEmpedernido()).count();
     }
     public Boolean esHomogenea() {
-        return this.personas.stream().allMatch(p->p.getNacionalidad())
+        return this.personas.stream().allMatch(p->p.getNacionalidad());
     }
     
    
